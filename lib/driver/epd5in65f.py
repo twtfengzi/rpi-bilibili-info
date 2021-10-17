@@ -30,11 +30,9 @@
 #
 
 import logging
-from . import epdconfig
+from lib.driver import epdconfig
 
-import PIL
 from PIL import Image
-import io
 
 # Display resolution
 EPD_WIDTH       = 600
