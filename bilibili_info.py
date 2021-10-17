@@ -21,6 +21,7 @@ class BilibiliInfo:
     def __init__(self):
         self.font18 = ImageFont.truetype(self.font_file, 18)
         self.font24 = ImageFont.truetype(self.font_file, 24)
+        self.epd = epd5in65f.EPD()
 
     def generate_image(self):
         image = Image.new('RGB', (self.epd.width, self.epd.height), 0xffffff)
@@ -33,7 +34,6 @@ class BilibiliInfo:
         image.save('test.bmp')
 
     def display(self, image):
-        self.epd = epd5in65f.EPD()
         self.epd.init()
         self.epd.Clear()
 
